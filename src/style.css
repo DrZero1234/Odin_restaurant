@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "MrDafoe";
+    src: url("./fonts/MrDafoe/title-font-webfont.woff") format("woff"),
+         url("./fonts/MrDafoe/title-font-webfont.woff2") format("woff2");
+    font-weight: 700;
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,22 +21,64 @@ html {
 }
 
 .navbar,
-.footer {
-    background-color: black;
+footer {
     color: white;
-    padding: 20px 0px
+    text-align: center;
+}
+
+.navbar {
+    background-image: url(./navbar.jpg);
+    background-size: cover;
+    padding: 20px;
+    
 }
 
 .navbar > ul {
     display: flex;
     list-style-type: none;
-    gap: 45px;
-    justify-content: center;
+    gap: 100px;
+    margin-right: 100px;
+    justify-content: flex-end;
 }
 
-.footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.navbar li {
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#main-title {
+    font-family: "MrDafoe";
+    font-size: 96px;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+
+img {
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 300px;
+    max-width: 300px;
 }
