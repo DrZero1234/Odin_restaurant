@@ -18,7 +18,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 22px;
-    color: white;
+    color: #9CA3AF;
 }
 
 .navbar,
@@ -70,6 +70,34 @@ a {
     font-family: "MrDafoe";
     font-size: 96px;
 }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0px 30px;
+}
+
+
+
+.appetizers,
+.main-dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+    word-wrap: break-word;
+    align-items: stretch;
+}
+
+.menu-item {
+    border: 2px solid gold;
+    border-radius: 6px;
+    padding: 8px;
+    line-height: 1.3rem;
+}
+
+
 
 footer {
     background-color: black;
