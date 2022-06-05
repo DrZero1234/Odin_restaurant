@@ -119,13 +119,37 @@ a {
     font-weight: bolder;
 }
 
+.contact-wrapper {
+    display: flex;
+    outline: 2px solid green;
+    gap: 100px;
+    line-height: 2.1rem;
+    justify-content: center;
+    row-gap: 60px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 
 footer {
     background-color: black;
+    position: absolute;
+    right: 0;
+    left: 0;
     bottom: 0;
     padding: 20px;
 }
 
+#location-img {
+    min-height: 200px;
+    min-width: 200px;
+    max-height: 800px;
+    max-width: 800px;
+}
 
 img {
     min-height: 100px;
