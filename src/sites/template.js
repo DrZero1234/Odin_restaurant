@@ -1,8 +1,8 @@
 
+const content = document.getElementById("content")
 
-const PageTemplate = () => {
 
-    const content = document.getElementById("content")
+const PageNavbar = () => {
 
     const navbar = document.createElement("div")
     navbar.className = "navbar";
@@ -10,7 +10,7 @@ const PageTemplate = () => {
     const list_element = document.createElement("ul");
 
     const li1 = document.createElement("li");
-    li1.textContent = "Home;"
+    li1.textContent = "Home"
 
     const li2 = document.createElement("li");
     li2.textContent = "Menu";
@@ -25,10 +25,18 @@ const PageTemplate = () => {
 
     navbar.appendChild(list_element);
 
-    const footer = document.createElement("footer");
-    footer.textContent = "@The Odin Project"
+
     
     content.appendChild(navbar)
+
+}
+
+const PageFooter = () => {
+    console.log("Foooter")
+
+    const footer = document.createElement("footer");
+    footer.textContent = "@The Odin Project"
+
     content.append(footer)
 }
 
@@ -46,4 +54,4 @@ const PageTemplate = () => {
 <footer>@The Odin project</footer>
 `
 
-export default PageTemplate
+export  {PageNavbar, PageFooter}

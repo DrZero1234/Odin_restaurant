@@ -137,9 +137,8 @@ a {
 
 footer {
     background-color: black;
-    position: absolute;
-    right: 0;
-    left: 0;
+    position: fixed;
+    width: 100%;
     bottom: 0;
     padding: 20px;
 }
@@ -156,4 +155,8 @@ img {
     min-width: 100px;
     max-height: 300px;
     max-width: 300px;
+}
+
+li {
+    cursor: pointer;
 }

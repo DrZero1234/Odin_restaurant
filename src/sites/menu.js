@@ -1,3 +1,88 @@
+const APPETIZERS = [ {
+        name: "STARTER SALAD - CAESAR",
+        description: "Romaine lettuce, smoked bacon, croutons, Grana Padano cheese, signature Caesar dressing.",
+        price: "9 $"
+    },
+
+    {
+        name: "CRISPY SHRIMP",
+        description: "Hand-battered in Cajun spices, enhanced with General Tao sauce, served on Asian slaw",
+        price: "18 $"
+    },
+
+    {
+        name: "CHEDDAR DIP",
+        description: "Warm blend of cheeses, diced tomatoes enhanced with Smoke Show® hot sauce, served with warm tortilla chips.",
+        price: "14 $"
+    },
+
+    {
+        name: "CAULIFLOWER WINGS",
+        description: "Crispy cauliflower bites topped with General Tao sauce and sesame seeds",
+        price: "12 $"
+    }
+]
+
+const CONTENT = document.getElementById("content")
+
+const get_appetizers = () => {
+    let m_item_divs = []
+    APPETIZERS.forEach((appetizer) => {
+        let m_item_div = document.createElement("div");
+        m_item_div.className = "menu-item";
+
+        let m_item_name = document.createElement("h3");
+        m_item_name.textContent = appetizer.name;
+
+        let m_item_desc = document.createElement("p");
+        m_item_desc.textContent = appetizer.description;
+
+        let m_item_price = document.createElement("p")
+        m_item_price.className = "price";
+        m_item_price.textContent = appetizer.price;
+
+        m_item_div.appendChild(m_item_name);
+        m_item_div.appendChild(m_item_desc);
+        m_item_div.appendChild(m_item_price)
+
+        m_item_divs.push(m_item_div)
+    })
+
+    return m_item_divs;
+}
+
+const menuPage = () => {
+    const menu_div = document.createElement("div");
+    menu_div.className = "menu";
+
+    const appetizer_wrapper = document.createElement("div");
+    appetizer_wrapper.className = "appetizers-wrapper";
+
+    const appetizer_title_div = document.createElement("div");
+    appetizer_title_div.id = "appetizers-title";
+
+    const appetizer_title = document.createElement("h2");
+    appetizer_title.textContent = "Appetizers"
+    
+    appetizer_title_div.appendChild(appetizer_title);
+
+    const appetizers_div = document.createElement("div");
+    appetizers_div.className = "appetizers";
+
+    get_appetizers().forEach(appetizer => {
+        appetizers_div.appendChild(appetizer)
+    })
+
+    appetizer_wrapper.appendChild(appetizer_title);
+    appetizer_wrapper.appendChild(appetizers_div)
+    menu_div.appendChild(appetizer_wrapper)
+
+    CONTENT.appendChild(menu_div)
+    
+
+
+}
+
 `
 <div class="menu">
 <div class="appetizers-wrapper">
@@ -70,3 +155,5 @@
 </div>
 </div>
 `
+
+export {menuPage}
