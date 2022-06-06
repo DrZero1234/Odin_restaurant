@@ -11,22 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
         switch(item.textContent) {
             case "Home":
                 item.addEventListener("click", () => {
-                    CONTENT_ELEM.innerHTML = ""
-                    PageNavbar();
+                    const MAIN_ELEM = document.querySelector(".menu") || document.querySelector(".main");
+                    MAIN_ELEM.innerHTML = ""
+                    if (MAIN_ELEM) {
+                        CONTENT_ELEM.removeChild(MAIN_ELEM)
+                    }
+
                     homePage();
                     PageFooter();
+                    console.log(MAIN_ELEM);
 
                 })
                 break;
             case "Menu":
                 item.addEventListener("click", () => {
-                    CONTENT_ELEM.innerHTML = ""
-                    PageNavbar();
+                    const MAIN_ELEM = document.querySelector(".menu") || document.querySelector(".main");
+                    MAIN_ELEM.innerHTML = ""
+                    if (MAIN_ELEM) {
+                        CONTENT_ELEM.removeChild(MAIN_ELEM)
+                    };
                     menuPage();
-                    PageFooter();
+                    console.log(MAIN_ELEM);
 
                 })
                 break;
+
+            default:
         }
     })
 
