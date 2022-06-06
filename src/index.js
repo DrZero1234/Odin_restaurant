@@ -16,10 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (MAIN_ELEM) {
                         CONTENT_ELEM.removeChild(MAIN_ELEM)
                     }
-
                     homePage();
-                    PageFooter();
-                    console.log(MAIN_ELEM);
 
                 })
                 break;
@@ -31,12 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         CONTENT_ELEM.removeChild(MAIN_ELEM)
                     };
                     menuPage();
-                    console.log(MAIN_ELEM);
 
                 })
                 break;
-
-            default:
         }
     })
 

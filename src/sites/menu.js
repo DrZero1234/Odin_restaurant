@@ -23,11 +23,56 @@ const APPETIZERS = [ {
     }
 ]
 
+const MAIN_DISHES = [
+    {
+        name: "CLUB SANDWICH",
+        description: "Flame-grilled chicken breast, smoked bacon, Monterey Jack, lettuce, tomato & mayonnaise",
+        price: "19 $"
+    },
+    {
+        name: "BIG DEVIL BURGER",
+        description: "Premium beef, onion rings, tomatoes, Swiss cheese, smoked bacon with sweet & spicy BBQ sauce",
+        price: "20 $"
+    },
+    {
+        name: "CHICKEN TENDERS PLATTER",
+        description: "Five hand-battered chicken tenders, served with BBQ & Dijonnaise sauces or French fries",
+        price: "21 $"
+    },
+    {
+        name: "BBQ PORK BACK RIBS",
+        description: "Our signature fall-off-the-bone pork back ribs, slow-cooked at low heat for 8 hours until they’re mouthwateringly tender and basted with our made-in-house classic Bâton Rouge BBQ sauce.",
+        price: "28 $"
+    },
+    {
+        name: "RIBS & JUMBO BLACK TIGER SHRIMP",
+        description: "A full rack of ribs served alongside a Black Tiger shrimp skewer, smothered in BBQ sauce",
+        price: "45 $"
+    },
+    {
+        name: "FILET MIGNON",
+        description: "THE FINEST CUTS. Our Reserve Steaks are certified Canada AAA, hand-selected for superior quality and marbling, aged to tender perfection then seasoned with our own spice blend and served alongside our signature peppercorn sauce.",
+        price: "44 $"
+    },
+    {
+        name: "NEW YORK STRIPLOIN",
+        description: "The result is a richness of flavour distinct to Bâton Rouge. Dishes are served with seasonal vegetables and one choice among the following: French fries, garlic mashed potatoes, fully loaded baked potato, sweet potato fries, coleslaw, wild rice pilaf or side salad",
+        price: "41 $"
+    },
+
+]
+
 const CONTENT = document.getElementById("content")
 
-const get_appetizers = () => {
+const get_menu = (menu_type) => {
     let m_item_divs = []
-    APPETIZERS.forEach((appetizer) => {
+    let menu_items;
+    if (menu_type === "appetizer") {
+        menu_items = APPETIZERS
+    } else if (menu_type === "main") {
+        menu_items = MAIN_DISHES
+    }
+    menu_items.forEach((appetizer) => {
         let m_item_div = document.createElement("div");
         m_item_div.className = "menu-item";
 
@@ -52,6 +97,8 @@ const get_appetizers = () => {
 }
 
 const menuPage = () => {
+
+    // APPETIZERS HTML CODE
     const menu_div = document.createElement("div");
     menu_div.className = "menu";
 
@@ -69,13 +116,40 @@ const menuPage = () => {
     const appetizers_div = document.createElement("div");
     appetizers_div.className = "appetizers";
 
-    get_appetizers().forEach(appetizer => {
+    get_menu("appetizer").forEach(appetizer => {
         appetizers_div.appendChild(appetizer)
     })
 
     appetizer_wrapper.appendChild(appetizer_title);
     appetizer_wrapper.appendChild(appetizers_div)
+
+    // MAIN-DISH HTML CODE
+
+    const main_dish_wrapper = document.createElement("div");
+    main_dish_wrapper.className = "main-dish-wrapper";
+
+    const main_dish_title_div = document.createElement("div");
+    main_dish_title_div.id = "main-dish-title";
+
+    const main_dish_title = document.createElement("h2");
+    main_dish_title.textContent = "Main dishes";
+
+    main_dish_title_div.appendChild(main_dish_title);
+
+    const main_dishes_div = document.createElement("div");
+    main_dishes_div.className = "main-dishes"
+
+    get_menu("main").forEach(main_dish => {
+        main_dishes_div.appendChild(main_dish)
+    })
+
+    main_dish_wrapper.appendChild(main_dish_title);
+    main_dish_wrapper.appendChild(main_dishes_div)
+
+
+
     menu_div.appendChild(appetizer_wrapper)
+    menu_div.appendChild(main_dish_wrapper)
 
     CONTENT.appendChild(menu_div)
     

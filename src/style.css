@@ -81,7 +81,7 @@ a {
     margin: 0px 30px;
     background-color: #6B7280;
     opacity: .8;
-    margin: 26px;
+    margin: 75px 26px;
     padding: 12px;
 }
 
@@ -137,8 +137,8 @@ a {
 
 footer {
     background-color: black;
-    position: fixed;
     width: 100%;
+    position: fixed;
     bottom: 0;
     padding: 20px;
 }
