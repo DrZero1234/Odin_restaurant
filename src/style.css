@@ -134,6 +134,11 @@ a {
     gap: 50px;
 }
 
+.contact-image {
+    display: flex;
+    align-items: center;
+}
+
 
 footer {
     background-color: black;
@@ -146,8 +151,8 @@ footer {
 #location-img {
     min-height: 200px;
     min-width: 200px;
-    max-height: 800px;
-    max-width: 800px;
+    max-height: 400px;
+    max-width: 400px;
 }
 
 img {
