@@ -1,3 +1,5 @@
+import location from "../location.jpg"
+
 const content = document.getElementById("content")
 
 const contactPage = () => {
@@ -65,7 +67,7 @@ const contactPage = () => {
 
     const contact_image = document.createElement("img");
     contact_image.id = "location-img"
-    contact_image.setAttribute("src", "../src/location.jpg")
+    contact_image.setAttribute("src", location)
     contact_image.setAttribute("alt", "Location Image")
 
     contact_image_div.appendChild(contact_image);

@@ -1,15 +1,20 @@
+import icon from "../icon.png"
+
+
 
 const content = document.getElementById("content")
 
 const homePage = () => {
+
+    console.log(icon)
 
     const main = document.createElement("div");
     main.className = "main"
 
     const main_icon = document.createElement("img");
     main_icon.setAttribute("alt", "restaurant icon")
-    main_icon.setAttribute("src", "../src/icon.png")
-
+    main_icon.setAttribute("src", icon)
+    
     const company_name = document.createElement("h1");
     company_name.id = "main-title";
     company_name.textContent = "The United Stakes";
