@@ -3,6 +3,7 @@ import {PageNavbar, PageFooter} from "./sites/template.js";
 import {homePage} from "./sites/home.js"
 import {menuPage} from "./sites/menu.js"
 import {contactPage} from "./sites/contact.js"
+import background from "./background.jpg"
 
 document.addEventListener("DOMContentLoaded", () => {
 
